@@ -20,11 +20,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 100px;
+    padding: 8px 100px;
 }
 
 nav img {
-    width: 150px;
+    width: 130px;
 }
 
 nav ul {
@@ -45,7 +45,7 @@ nav ul li a {
 nav ul li:not(:last-child):after {
     content: '/';
     color: #EF4136;
-    margin: 0 24px;
+    margin: 0 32px;
 }
 
 #carousel {
@@ -63,7 +63,7 @@ nav ul li:not(:last-child):after {
 }
 
 #carousel .carousel-container {
-    height: calc(100vh - 130px);
+    height: calc(100vh - 140px);
 }
 
 #carousel .carousel-image {
@@ -98,4 +98,32 @@ nav ul li:not(:last-child):after {
 
 .slick-dots {
     top: 0;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+footer {
+    display: flex;
+    color: #262262;
+    padding: 16px 32px;
+}
+
+footer img {
+    width: 30px;
+    margin-right: 8px;
+}
+
+#address, #phone, #networks {
+    display: flex;
+    align-items: center;
+}
+
+footer #address {
+    margin-right: 32px;
+}
+
+footer #networks {
+    margin-left: auto;
 }
