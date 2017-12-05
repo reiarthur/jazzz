@@ -48,8 +48,22 @@ nav ul li:not(:last-child):after {
     margin: 0 24px;
 }
 
-#carousel #carousel-container {
-    height: calc(100vh - 70px);
+#carousel {
+    position: relative;
+}
+
+#carousel::after {
+    content: ' ';
+    height: 130px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background: url('ondas.png');
+    background-size: cover;
+}
+
+#carousel .carousel-container {
+    height: calc(100vh - 130px);
 }
 
 #carousel .carousel-image {
@@ -71,4 +85,17 @@ nav ul li:not(:last-child):after {
 
 #image-4 {
     background: url('foto-4.png');
+}
+
+.slick-prev {
+    left: 50px;
+    z-index: 1;
+}
+.slick-next {
+    right: 50px;
+    z-index: 1;
+}
+
+.slick-dots {
+    top: 0;
 }

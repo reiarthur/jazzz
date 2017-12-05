@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title> Jazzz </title>
-        <link rel="stylesheet" href="assets/style.css" type="text/css" />
         <link rel="stylesheet" type="text/css" href="assets/slick-carousel/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="assets/slick-carousel/slick/slick-theme.css"/>
+        <link rel="stylesheet" href="assets/style.css" type="text/css" />
     </head>
     <body>
         <nav>
@@ -18,5 +18,32 @@
                 <li>Contato</li>
             </ul>
         </nav>
+        
+        <div id="carousel">
+            
+            <div class="carousel-container">
+                <div class="carousel-image" id="image-1"></div>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-image" id="image-2"></div>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-image" id="image-3"></div>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-image" id="image-4"></div>
+            </div>
+            
+        </div>
+        
+        <script type="text/javascript" src="assets/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/slick-carousel/slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $('#carousel').slick({
+                  dots: true
+              });
+            });
+        </script>
     </body>
 </html>
