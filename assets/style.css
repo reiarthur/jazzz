@@ -48,11 +48,7 @@ nav ul li:not(:last-child):after {
     margin: 0 32px;
 }
 
-#carousel {
-    position: relative;
-}
-
-#carousel::after {
+/*#carousel::after {
     content: ' ';
     height: 130px;
     width: 100%;
@@ -60,48 +56,92 @@ nav ul li:not(:last-child):after {
     bottom: 0px;
     background: url('ondas.png');
     background-size: cover;
-}
+}*/
 
-#carousel .carousel-container {
+/* .carousel-container {
     height: calc(100vh - 140px);
-}
-
-#carousel .carousel-image {
-    height: 100%;
-    background-size: cover;
+    position: relative;
 }
 
 #image-1 {
     background: url('foto-1.png');
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 #image-2 {
     background: url('foto-2.png');
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 #image-3 {
     background: url('foto-3.png');
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 #image-4 {
     background: url('foto-4.png');
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+*/
+
+#image-1 {
+    background: url('foto-1.png');
+    height: calc(100vh - 140px);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
 }
 
-.slick-prev {
-    left: 50px;
-    z-index: 1;
-}
-.slick-next {
-    right: 50px;
-    z-index: 1;
-}
-
-.slick-dots {
-    top: 0;
+#image-2 {
+    background: url('foto-2.png');
+    height: calc(100vh - 140px);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
 }
 
-.slick-dotted.slick-slider {
-    margin-bottom: 0;
+#image-3 {
+    background: url('foto-3.png');
+    height: calc(100vh - 140px);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#image-4 {
+    background: url('foto-4.png');
+    height: calc(100vh - 140px);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.flickity-page-dots {
+  top: 8px;
+  height: 8px;
+}
+
+.flickity-page-dots .dot {
+  width: 8px;
+  height: 8px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: white;
 }
 
 footer {
@@ -126,4 +166,57 @@ footer #address {
 
 footer #networks {
     margin-left: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    nav {
+        flex-direction: column;
+        padding: 80px 24px 8px 24px;
+    }
+    
+    nav::after {
+        content: ' ';
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        top: -20px;
+        background: url('ondas.png');
+        transform: rotate(180deg);
+        background-size: cover;
+        background-position: center
+    }
+    
+    nav ul { 
+        padding: 0;
+    }
+    
+    nav ul li {
+        font-size: 1.3em;
+    }
+    
+    nav ul li:not(:last-child):after {
+        content: '/';
+        color: #EF4136;
+        margin: 0 16px;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer #address {
+        margin: 8px 0;
+        max-width: 340px;
+        text-align: center;
+    }
+    
+    footer #phone {
+        margin: 8px 0;
+    }
+    
+    footer #networks {
+        margin: 8px 0;
+    }
 }

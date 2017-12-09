@@ -2,9 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title> Jazzz </title>
-        <link rel="stylesheet" type="text/css" href="assets/slick-carousel/slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="assets/slick-carousel/slick/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/flickity.min.css"/>
         <link rel="stylesheet" href="assets/style.css" type="text/css" />
     </head>
     <body>
@@ -13,13 +13,13 @@
             
             <ul>
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="about.html">Sobre</a></li>
                 <li>Cases</li>
                 <li>Contato</li>
             </ul>
         </nav>
         
-        <div id="carousel">
+        <!--div id="carousel">
             
             <div class="carousel-container">
                 <div class="carousel-image" id="image-1"></div>
@@ -34,6 +34,13 @@
                 <div class="carousel-image" id="image-4"></div>
             </div>
             
+        </div-->
+        
+        <div id="carousel">
+            <div id="image-1"></div>
+            <div id="image-2"></div>
+            <div id="image-3"></div>
+            <div id="image-4"></div>
         </div>
         
         <footer>
@@ -56,13 +63,10 @@
             </div>
         </footer>
         
-        <script type="text/javascript" src="assets/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/slick-carousel/slick/slick.min.js"></script>
+        <script type="text/javascript" src="assets/flickity.pkgd.min.js"></script>
         <script>
-            $(document).ready(function(){
-              $('#carousel').slick({
-                  dots: true
-              });
+            var flkty = new Flickity( '#carousel', {
+              wrapAround: true,
             });
         </script>
     </body>
